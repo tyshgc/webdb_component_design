@@ -1,4 +1,4 @@
-# webdb_component_design
+# WEB+DB PRESS vol.112 号「コンポーネント設計 - モダンフロントエンドの構造化と分割の新提案」のサンプルコード
 
 WEB+DB PRESS vol.112 号のサンプルコード用リポジトリです。随時アップデート中！
 [@tyshgc](https://twitter.com/tyshgc)
