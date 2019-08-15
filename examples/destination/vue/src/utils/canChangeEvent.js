@@ -1,0 +1,1 @@
+export const canChangeEvent = (event, res)=> event && res

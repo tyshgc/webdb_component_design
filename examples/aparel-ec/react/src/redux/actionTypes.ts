@@ -1,0 +1,8 @@
+/**
+ * Redux Action Types
+ */
+export enum ACTION_TYPES {
+  FIND_PRODUCTION = "FIND_PRODUCTION",
+  FIND_CATEGORY = "FINED_CATEGORY",
+  FIND_BRAND = "FIND_BRAND"
+}
