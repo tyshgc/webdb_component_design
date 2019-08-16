@@ -1,4 +1,4 @@
-# webdb_component_design
+# WEB+DB PRESS vol.112 号「コンポーネント設計 - モダンフロントエンドの構造化と分割の新提案」のサンプルコード
 
 WEB+DB PRESS vol.112 号のサンプルコード用リポジトリです。随時アップデート中！
 [@tyshgc](https://twitter.com/tyshgc)
@@ -21,9 +21,9 @@ WEB+DB PRESS vol.112 号のサンプルコード用リポジトリです。随�
 
 | 必要なもの                        | 推奨バージョン       | 参考 |
 | :-------------------------------- | :------------------- | :--- |
-| [node.js](https://nodejs.org/ja/) | v10.15.3(npm v6.4.1) |      | [nodebrew](https://github.com/hokaccha/nodebrew)をお勧めします  |
-| [yarn](https://yarnpkg.com/en/)   | 最新で               |      |
-| [vue-cli](https://cli.vuejs.org/) | v3.7.0               |
+| [node.js](https://nodejs.org/ja/) | v10.15.3(npm v6.4.1) | [nodebrew](https://github.com/hokaccha/nodebrew)をお勧めします |
+| [yarn](https://yarnpkg.com/en/)   | 最新で               ||
+| [vue-cli](https://cli.vuejs.org/) | v3.7.0               ||
 
 ### インストール
 
