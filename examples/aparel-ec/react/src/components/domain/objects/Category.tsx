@@ -5,7 +5,7 @@
 import React from "react";
 
 // Types
-import { typeCategory } from "../../../types/Category";
+import { typeCategory } from "aparel-ec";
 
 interface Props {
   name?: typeCategory["name"];

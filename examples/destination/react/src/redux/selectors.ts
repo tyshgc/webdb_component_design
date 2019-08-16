@@ -1,7 +1,7 @@
 import { createSelector } from "reselect";
 
 // Types
-import { typeState } from "../types/State";
+import { typeState } from "destination";
 
 /**
  * 宛先編集（登録）に関するSelector

@@ -13,9 +13,7 @@ import { Address, Name, PostalCode } from "../elements";
 import { Layout } from "../../layouts";
 
 // Types
-import { typeFullName } from "../../../types/Name";
-import { typePostalCodeAll } from "../../../types/PostalCode";
-import { typeAddress } from "../../../types/Address";
+import { typeFullName, typePostalCodeAll, typeAddress } from "destination";
 
 interface Props {
   name?: typeFullName;

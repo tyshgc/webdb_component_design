@@ -5,9 +5,7 @@ import actionCreatorFactory from "typescript-fsa";
 import { ACTION_TYPES } from "./actionTypes";
 
 // Types
-import { typeProduct } from "../types/Product";
-import { typeCategory } from "../types/Category";
-import { typeBrand } from "../types/Brand";
+import { typeProduct, typeCategory, typeBrand } from "aparel-ec";
 
 const actionCreator = actionCreatorFactory("aparel-ec");
 

@@ -1,8 +1,8 @@
 /**
  * 宛先の郵便番号に関するReducer
  */
-import { typeState } from "../../types/State";
-import { POSTALCODE_TYPE, typePostalCodePayload } from "../../types/PostalCode";
+import { typeState, typePostalCodePayload } from "destination";
+import { POSTALCODE_TYPE } from "../../enums";
 
 export const writePostalCodeAction = (
   state: typeState,

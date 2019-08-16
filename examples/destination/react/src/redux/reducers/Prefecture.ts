@@ -1,8 +1,7 @@
 /**
  * 宛先の都道府県に関するReducer
  */
-import { typeState } from "../../types/State";
-import { typePrefecturePayload } from "../../types/Prefecture";
+import { typeState, typePrefecturePayload } from "destination";
 
 export const selectPrefectureAction = (
   state: typeState,

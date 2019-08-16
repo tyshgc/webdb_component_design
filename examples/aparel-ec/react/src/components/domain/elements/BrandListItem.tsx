@@ -17,7 +17,7 @@ import { BlockLayout } from "../../layouts";
 import { REFER_BRAND_LINK_LABEL } from "../../../constants";
 
 // Types
-import { typeBrand } from "../../../types/Brand";
+import { typeBrand } from "aparel-ec";
 
 interface Props {
   id?: typeBrand["id"];

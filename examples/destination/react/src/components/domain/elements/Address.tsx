@@ -8,12 +8,10 @@ import { TextFieldGroup } from "../../gui/groups";
 import { FieldBlockWrapper, SelectBox } from "../../gui/parts";
 
 // Types
-import { typeCityStreet } from "../../../types/CityStreet";
-import { typePrefecture } from "../../../types/Prefecture";
-import { typeAddress } from "../../../types/Address";
+import { typeAddress, typePrefecture, typeCityStreet } from "destination";
 
-// Contains
-import { prefectures } from "../../../prefectures";
+// Constants
+import { PREFECTURES } from "../../../constants";
 enum LABELS {
   ALL = "住所",
   PREFECTURE = "都道府県を選択",
@@ -80,7 +78,7 @@ export const AddressEdit = (props: EditProps) => {
     <>
       <FieldBlockWrapper heading={LABELS.PREFECTURE}>
         <SelectBox
-          choices={prefectures}
+          choices={PREFECTURES}
           selected={prefecture}
           onSelected={onSelected}
         />

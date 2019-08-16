@@ -17,10 +17,16 @@ import {
 import { Layout } from "../../layouts";
 
 // Types
-import { typeName, typeNameEvent } from "../../../types/Name";
-import { typePostalCode, typePostalCodeEvent } from "../../../types/PostalCode";
-import { typeCityStreet, typeCityStreetEvent } from "../../../types/CityStreet";
-import { typePrefecture, typePrefectureEvent } from "../../../types/Prefecture";
+import {
+  typeName,
+  typeNameEvent,
+  typePostalCode,
+  typePostalCodeEvent,
+  typeCityStreet,
+  typeCityStreetEvent,
+  typePrefecture,
+  typePrefectureEvent
+} from "destination";
 
 interface Props {
   name: {

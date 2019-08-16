@@ -1,7 +1,7 @@
 /**
  * 宛先に関するReducer
  */
-import { typeState } from "../../types/State";
+import { typeState } from "destination";
 
 export const registDestinationAction = (state: typeState) => {
   const destination = state.editDestination;

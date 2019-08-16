@@ -5,10 +5,12 @@ import actionCreatorFactory from "typescript-fsa";
 import { ACTION_TYPES } from "./actionTypes";
 
 // Types
-import { typeNamePayload } from "../types/Name";
-import { typePostalCodePayload } from "../types/PostalCode";
-import { typePrefecturePayload } from "../types/Prefecture";
-import { typeCityStreetPayload } from "../types/CityStreet";
+import {
+  typeNamePayload,
+  typePostalCodePayload,
+  typePrefecturePayload,
+  typeCityStreetPayload
+} from "destination";
 
 const actionCreator = actionCreatorFactory("destination");
 

@@ -10,7 +10,7 @@ import { ListLayout, ListItemLayout } from "../../layouts";
 import { CategoryListItem } from "../elements";
 
 // Types
-import { typeCategories, typeCategory } from "../../../types/Category";
+import { typeCategories, typeCategory } from "aparel-ec";
 
 interface Props {
   categories?: typeCategories;

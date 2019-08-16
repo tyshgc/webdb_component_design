@@ -10,7 +10,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // Types
-import { typeCategory } from "../../../types/Category";
+import { typeCategory } from "aparel-ec";
 
 interface Props {
   label?: typeCategory["label"];

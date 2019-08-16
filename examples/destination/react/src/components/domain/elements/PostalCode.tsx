@@ -11,11 +11,11 @@ import { FieldBlockWrapper, TextField } from "../../gui/parts";
 
 // Types
 import {
-  POSTALCODE_TYPE,
   typePostalCodeEvent,
   typePostalCode,
   typePostalCodeAll
-} from "../../../types/PostalCode";
+} from "destination";
+import { POSTALCODE_TYPE } from "../../../enums";
 
 // Constants
 const LABEL = "郵便番号";

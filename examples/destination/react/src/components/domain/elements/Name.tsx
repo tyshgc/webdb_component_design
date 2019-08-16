@@ -5,12 +5,8 @@ import { TextFieldGroup } from "../../gui/groups";
 import { FieldBlockWrapper } from "../../gui/parts";
 
 // Types
-import {
-  typeName,
-  typeFullName,
-  typeNameEvent,
-  NAME_TYPE
-} from "../../../types/Name";
+import { typeName, typeFullName, typeNameEvent } from "destination";
+import { NAME_TYPE } from "../../../enums";
 
 // Constants
 enum LABELS {

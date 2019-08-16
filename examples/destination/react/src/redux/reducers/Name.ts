@@ -1,8 +1,8 @@
 /**
  * 宛先の名前に関するReducer
  */
-import { typeState } from "../../types/State";
-import { NAME_TYPE, typeNamePayload } from "../../types/Name";
+import { typeState, typeNamePayload } from "destination";
+import { NAME_TYPE } from "../../enums";
 
 export const writeNameReducer = (
   state: typeState,

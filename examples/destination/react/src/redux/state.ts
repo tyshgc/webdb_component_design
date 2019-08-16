@@ -1,7 +1,7 @@
 /**
  * アプリケーションの状態
  */
-import { typeState } from "../types/State";
+import { typeState } from "destination";
 
 export const initialState: typeState = {
   editDestination: {

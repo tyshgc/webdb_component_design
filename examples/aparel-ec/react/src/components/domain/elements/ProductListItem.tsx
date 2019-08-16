@@ -16,12 +16,12 @@ import { ListItemGroup } from "../../gui/groups";
 import { BlockLayout } from "../../layouts";
 
 // Types
-import { typeBrand } from "../../../types/Brand";
 import {
+  typeBrand,
   typeProduct,
   typeComputedPriceLabel,
   typeComputedProductTitle
-} from "../../../types/Product";
+} from "aparel-ec";
 
 interface Props {
   brandName?: typeBrand["name"];

@@ -5,7 +5,7 @@
 import React from "react";
 
 // Types
-import { typeBrand } from "../../../types/Brand";
+import { typeBrand } from "aparel-ec";
 
 interface Props {
   name?: typeBrand["name"];

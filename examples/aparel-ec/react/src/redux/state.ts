@@ -5,7 +5,7 @@
 import { PRODUCTS_DATA, CATEGORIES_DATA, BRANDS_DATA } from "./mocks/";
 
 // Types
-import { typeState } from "../types/State";
+import { typeState } from "aparel-ec";
 
 export const initialState: typeState = {
   products: PRODUCTS_DATA,

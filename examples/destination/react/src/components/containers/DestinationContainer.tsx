@@ -16,10 +16,13 @@ import actions from "../../redux/actions";
 import { Destination, DestinationEdit } from "../domain/objects";
 
 // Types
-import { typeName, NAME_TYPE } from "../../types/Name";
-import { typePostalCode, POSTALCODE_TYPE } from "../../types/PostalCode";
-import { typePrefecture } from "../../types/Prefecture";
-import { typeCityStreet } from "../../types/CityStreet";
+import {
+  typeName,
+  typePostalCode,
+  typeCityStreet,
+  typePrefecture
+} from "destination";
+import { POSTALCODE_TYPE, NAME_TYPE } from "../../enums";
 
 /**
  * DestinationContainer

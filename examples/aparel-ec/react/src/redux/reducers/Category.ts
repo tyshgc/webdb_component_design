@@ -1,8 +1,7 @@
 /**
  * カテゴリに関するReducer
  */
-import { typeState } from "../../types/State";
-import { typeCategory } from "../../types/Category";
+import { typeState, typeCategory } from "aparel-ec";
 
 // 任意カテゴリを指定する
 export const selectCategoryAction = (

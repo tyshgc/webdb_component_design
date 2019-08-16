@@ -1,8 +1,7 @@
 /**
  * 宛先の住所（市区町村・番地以下）に関するReducer
  */
-import { typeState } from "../../types/State";
-import { typeCityStreetPayload } from "../../types/CityStreet";
+import { typeState, typeCityStreetPayload } from "destination";
 
 export const writeCityStreetAction = (
   state: typeState,

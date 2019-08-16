@@ -1,8 +1,7 @@
 /**
  * 商品に関するReducer
  */
-import { typeState } from "../../types/State";
-import { typeProduct } from "../../types/Product";
+import { typeState, typeProduct } from "aparel-ec";
 
 // 該当商品を探して参照する
 export const findProductAction = (state: typeState, id: typeProduct["id"]) => {

@@ -1,8 +1,7 @@
 import { createSelector } from "reselect";
 
 // Types
-import { typeState } from "../types/State";
-import { typeProduct, typeProducts } from "../types/Product";
+import { typeState, typeProduct, typeProducts } from "aparel-ec";
 
 //商品一覧に関するSelector
 const computedProductTitle = (productName: typeProduct["name"]) =>

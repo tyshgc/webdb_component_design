@@ -1,8 +1,7 @@
 /**
  * ブランドに関するReducer
  */
-import { typeState } from "../../types/State";
-import { typeBrand } from "../../types/Brand";
+import { typeState, typeBrand } from "aparel-ec";
 
 // 任意ブランドを指定する
 export const selectBrandAction = (
