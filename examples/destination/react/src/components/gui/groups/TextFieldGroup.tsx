@@ -27,10 +27,10 @@ export const TextFieldGroup = (props: Props) => {
 
   return (
     <LayoutFlex>
-      <LayoutFlexItem column={1}>
+      <LayoutFlexItem column={"20%"}>
         <InlineLabel text={inlineLabel} />
       </LayoutFlexItem>
-      <LayoutFlexItem column={2}>
+      <LayoutFlexItem column={"80%"}>
         <TextField defaultValue={defaultValue} onChanged={onChanged} />
       </LayoutFlexItem>
     </LayoutFlex>
