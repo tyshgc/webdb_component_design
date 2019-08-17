@@ -20,7 +20,7 @@ export const ScreenWrapper = (props: Props) => {
   return (
     <>
       <StyledNavBar>
-        <LayoutFlex>
+        <LayoutFlex height="100%">
           <LayoutFlexItem column={"80px"}>{DrawerTrigger()}</LayoutFlexItem>
           <LayoutFlexItem column={"100%"}>
             {PageTitle(pageTitle)}
@@ -60,5 +60,7 @@ const StyledLeft = styled.div`
 `;
 const StyledTitle = styled.h1`
   text-align: center;
-  font-size: 24px;
+  font-size: 1.4em;
+  margin: 0;
+  padding: 0;
 `;

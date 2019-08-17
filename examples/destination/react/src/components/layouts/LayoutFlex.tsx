@@ -12,6 +12,7 @@ import {
 } from "csstype";
 
 interface StyledProps {
+  height?: String | number;
   direction?: FlexDirectionProperty;
   justify?: TextJustifyProperty;
   verticalAlign?: BoxAlignProperty;
@@ -21,9 +22,9 @@ interface Props extends StyledProps {
 }
 
 export const LayoutFlex = (props: Props) => {
-  const { direction, justify, verticalAlign, children } = props;
+  const { direction, justify, verticalAlign, height, children } = props;
   return (
-    <StyledFlexBox {...{ direction, justify, verticalAlign }}>
+    <StyledFlexBox {...{ direction, justify, verticalAlign, height }}>
       {children}
     </StyledFlexBox>
   );
@@ -34,4 +35,9 @@ const StyledFlexBox = styled.div`
   flex-direction: ${(props: StyledProps) => props.direction || "row"};
   justify-content: ${(props: StyledProps) => props.justify || "space-between"};
   align-items: ${(props: StyledProps) => props.verticalAlign || "center"};
+
+  ${(props: StyledProps) => {
+    if (!props.height) return;
+    return `height: ${props.height}`;
+  }}
 `;
