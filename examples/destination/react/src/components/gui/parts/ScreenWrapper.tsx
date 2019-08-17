@@ -52,6 +52,8 @@ const PageTitle = (title?: string) => {
 
 const StyledNavBar = styled.header`
   background: #c1c1c1;
+  height: 72px;
+  padding-top: 12px;
 `;
 const StyledLeft = styled.div`
   text-align: center;
