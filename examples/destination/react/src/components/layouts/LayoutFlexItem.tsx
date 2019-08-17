@@ -6,9 +6,21 @@
  */
 
 import React from "react";
+import styled from "styled-components";
 
-interface Props {
-  column?: number;
+interface StyledProps {
+  column?: number | string;
+}
+interface Props extends StyledProps {
   children: React.ReactNode;
 }
-export const LayoutFlexItem = (props: Props) => <div>{props.children}</div>;
+export const LayoutFlexItem = (props: Props) => (
+  <StyledFlex column={props.column}>{props.children}</StyledFlex>
+);
+
+const StyledFlex = styled.div`
+  ${(props: StyledProps) => {
+    if (!props.column) return;
+    return `flex: ${props.column}`;
+  }}
+`;

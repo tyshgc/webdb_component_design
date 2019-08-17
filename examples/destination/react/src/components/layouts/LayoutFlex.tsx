@@ -4,9 +4,34 @@
  * ※誌面上ではStyledComponentを使用していませんが、このコード上では採用しています。
  */
 import React from "react";
+import styled from "styled-components";
+import {
+  FlexDirectionProperty,
+  TextJustifyProperty,
+  BoxAlignProperty
+} from "csstype";
 
-interface Props {
+interface StyledProps {
+  direction?: FlexDirectionProperty;
+  justify?: TextJustifyProperty;
+  verticalAlign?: BoxAlignProperty;
+}
+interface Props extends StyledProps {
   children: React.ReactNode;
 }
 
-export const LayoutFlex = (props: Props) => <div>{props.children}</div>;
+export const LayoutFlex = (props: Props) => {
+  const { direction, justify, verticalAlign, children } = props;
+  return (
+    <StyledFlexBox {...{ direction, justify, verticalAlign }}>
+      {children}
+    </StyledFlexBox>
+  );
+};
+
+const StyledFlexBox = styled.div`
+  display: flex;
+  flex-direction: ${(props: StyledProps) => props.direction || "row"};
+  justify-content: ${(props: StyledProps) => props.justify || "space-between"};
+  align-items: ${(props: StyledProps) => props.verticalAlign || "center"};
+`;
