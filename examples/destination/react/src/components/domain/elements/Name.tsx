@@ -1,6 +1,7 @@
 import React from "react";
 
 // Components
+import { Layout } from "../../layouts";
 import { TextFieldGroup } from "../../gui/groups";
 import { FieldBlockWrapper } from "../../gui/parts";
 
@@ -69,20 +70,20 @@ export const NameEdit = (props: EditProps) => {
 
   return (
     <FieldBlockWrapper heading={LABELS.FULLNAME}>
-      <div>
+      <Layout>
         <TextFieldGroup
           inlineLabel={LABELS.LASTNAME}
           defaultValue={lastName}
           onChanged={onLastNameChanged}
         />
-      </div>
-      <div>
+      </Layout>
+      <Layout>
         <TextFieldGroup
           inlineLabel={LABELS.FIRSTNAME}
           defaultValue={firstName}
           onChanged={onFirstNameChanged}
         />
-      </div>
+      </Layout>
     </FieldBlockWrapper>
   );
 };
