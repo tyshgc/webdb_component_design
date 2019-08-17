@@ -5,7 +5,7 @@ import React from "react";
 import styled from "styled-components";
 
 // Components
-import { LayoutFlex, LayoutFlexItem } from "../../layouts";
+import { Layout, LayoutFlex, LayoutFlexItem } from "../../layouts";
 
 // Svg
 import HamburgerMenu from "../../../assets/svg/HamburgerMenu";
@@ -17,6 +17,10 @@ interface Props {
 
 export const ScreenWrapper = (props: Props) => {
   const { children, pageTitle } = props;
+  const layoutOption = {
+    margin: {},
+    padding: { left: true, right: true }
+  };
   return (
     <>
       <StyledNavBar>
@@ -28,7 +32,14 @@ export const ScreenWrapper = (props: Props) => {
           <LayoutFlexItem column={"80px"}>{OptionMenu()}</LayoutFlexItem>
         </LayoutFlex>
       </StyledNavBar>
-      <main>{children}</main>
+      <StyledMain>
+        <Layout
+          hasMargin={layoutOption.margin}
+          hasPadding={layoutOption.padding}
+        >
+          {children}
+        </Layout>
+      </StyledMain>
     </>
   );
 };
@@ -50,10 +61,21 @@ const PageTitle = (title?: string) => {
   return <StyledTitle>{title}</StyledTitle>;
 };
 
+const NAV_BAR_HEIGHT = 72;
+
+const StyledMain = styled.main`
+  overflow: hidden;
+  position: relative;
+  top: ${NAV_BAR_HEIGHT}px;
+`;
+
 const StyledNavBar = styled.header`
   background: #c1c1c1;
-  height: 72px;
+  height: ${NAV_BAR_HEIGHT}px;
   padding-top: 12px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
 `;
 const StyledLeft = styled.div`
   text-align: center;
