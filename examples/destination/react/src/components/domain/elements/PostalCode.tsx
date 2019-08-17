@@ -70,24 +70,39 @@ export const PostalCodeEdit = (props: EditProps) => {
 
   return (
     <FieldBlockWrapper heading={LABEL}>
-      <LayoutFlex>
-        <LayoutFlexItem>
-          <StyledPostalCodeUpper
-            defaultValue={upper}
-            onChanged={onUpperChanged}
-          />
-        </LayoutFlexItem>
-        <LayoutFlexItem>-</LayoutFlexItem>
-        <LayoutFlexItem>
-          <StyledPostalCodeLower
-            defaultValue={lower}
-            onChanged={onLowerChanged}
-          />
-        </LayoutFlexItem>
-      </LayoutFlex>
+      <StyledWrapper>
+        <LayoutFlex justify="start">
+          <LayoutFlexItem column="60px">
+            <StyledPostalCodeUpper
+              defaultValue={upper}
+              placeholder=" "
+              onChanged={onUpperChanged}
+              width="60px"
+            />
+          </LayoutFlexItem>
+          <LayoutFlexItem column="12px">
+            <StyledSeparationBar>-</StyledSeparationBar>
+          </LayoutFlexItem>
+          <LayoutFlexItem column="120px">
+            <StyledPostalCodeLower
+              defaultValue={lower}
+              placeholder=" "
+              onChanged={onLowerChanged}
+              width="120px"
+            />
+          </LayoutFlexItem>
+        </LayoutFlex>
+      </StyledWrapper>
     </FieldBlockWrapper>
   );
 };
 
+const StyledWrapper = styled.div`
+  width: 80%;
+  max-width: 240px;
+`;
+const StyledSeparationBar = styled.div`
+  text-align: center;
+`;
 const StyledPostalCodeUpper = styled(TextField)``;
 const StyledPostalCodeLower = styled(TextField)``;

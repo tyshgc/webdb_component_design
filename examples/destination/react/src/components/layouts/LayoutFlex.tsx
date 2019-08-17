@@ -7,14 +7,14 @@ import React from "react";
 import styled from "styled-components";
 import {
   FlexDirectionProperty,
-  TextJustifyProperty,
-  BoxAlignProperty
+  BoxAlignProperty,
+  JustifyContentProperty
 } from "csstype";
 
 interface StyledProps {
   height?: String | number;
   direction?: FlexDirectionProperty;
-  justify?: TextJustifyProperty;
+  justify?: JustifyContentProperty;
   verticalAlign?: BoxAlignProperty;
 }
 interface Props extends StyledProps {

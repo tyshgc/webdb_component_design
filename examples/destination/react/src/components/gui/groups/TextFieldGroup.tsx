@@ -24,13 +24,20 @@ interface Props {
 
 export const TextFieldGroup = (props: Props) => {
   const { inlineLabel, defaultValue, onChanged } = props;
-
-  return (
-    <LayoutFlex>
+  const fieldSize = inlineLabel ? "80%" : undefined;
+  const InlineLabelFlex = () => {
+    if (!inlineLabel) return;
+    return (
       <LayoutFlexItem column={"20%"}>
         <InlineLabel text={inlineLabel} />
       </LayoutFlexItem>
-      <LayoutFlexItem column={"80%"}>
+    );
+  };
+
+  return (
+    <LayoutFlex>
+      {InlineLabelFlex()}
+      <LayoutFlexItem column={fieldSize}>
         <TextField defaultValue={defaultValue} onChanged={onChanged} />
       </LayoutFlexItem>
     </LayoutFlex>

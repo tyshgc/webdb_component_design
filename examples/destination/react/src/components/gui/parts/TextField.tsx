@@ -11,16 +11,18 @@ import styled from "styled-components";
 interface Props {
   defaultValue?: string;
   placeholder?: string;
+  width?: string | number;
   onChanged?: (res: React.BaseSyntheticEvent) => void;
 }
 
 export const TextField = (props: Props) => {
-  const { defaultValue, placeholder, onChanged } = props;
+  const { defaultValue, placeholder, width, onChanged } = props;
 
   return (
     <StyledFiled
       placeholder={placeholder || "入力してください…"}
       defaultValue={defaultValue}
+      width={width}
       onChange={onChanged}
     />
   );
@@ -33,4 +35,5 @@ const StyledFiled = styled.input`
   font-size: 1.4em;
   outline: none;
   padding: 10px 8px 8px;
+  width: ${(props: Props) => props.width || "auto"};
 `;
