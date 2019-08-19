@@ -6,14 +6,15 @@ import React from "react";
 
 // Components
 import { ProductContainer } from "../containers";
+import { ScreenWrapper } from "../gui/parts";
 
 export const ProductDetailScreen = (props: any) => {
   const id = props.match.params.id;
 
   return (
-    <section>
-      <i>商品詳細</i>
+    <ScreenWrapper>
+      <h1>商品詳細</h1>
       <ProductContainer id={id} />
-    </section>
+    </ScreenWrapper>
   );
 };

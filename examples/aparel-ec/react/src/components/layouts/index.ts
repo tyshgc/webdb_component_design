@@ -1,5 +1,13 @@
-import { BlockLayout } from "./BlockLayout";
-import { ListItemLayout } from "./ListItemLayout";
-import { ListLayout } from "./ListLayout";
+import { Layout } from "./Layout";
+import { LayoutList } from "./LayoutList";
+import { LayoutListItem } from "./LayoutListItem";
+import { LayoutLineList } from "./LayoutLineList";
+import { LayoutLineListItem } from "./LayoutLineListItem";
 
-export { BlockLayout, ListItemLayout, ListLayout };
+export {
+  Layout,
+  LayoutList,
+  LayoutListItem,
+  LayoutLineList,
+  LayoutLineListItem
+};

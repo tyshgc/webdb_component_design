@@ -3,23 +3,39 @@
  * Navigation Domain Object Component
  */
 import React from "react";
-import { Link } from "react-router-dom";
+
+// Components
+import { LayoutLineList, LayoutLineListItem } from "../../layouts/";
+import { ListTitle, ScreenTransition } from "../../gui/parts";
+
+// Constans
+const NAVIGATIONS = [
+  {
+    name: "商品",
+    to: "product"
+  },
+  {
+    name: "カテゴリ",
+    to: "category"
+  },
+  {
+    name: "ブランド",
+    to: "brand"
+  }
+];
 
 export const Navigation = () => {
+  const NavigaitonList = NAVIGATIONS.map((navigation, index) => (
+    <LayoutLineListItem key={index}>
+      <ScreenTransition screenName={navigation.to}>
+        <ListTitle title={navigation.name} />
+      </ScreenTransition>
+    </LayoutLineListItem>
+  ));
   return (
     <>
       <h1>メニュー</h1>
-      <ul>
-        <li>
-          <Link to="/product">商品</Link>
-        </li>
-        <li>
-          <Link to="/category">カテゴリ</Link>
-        </li>
-        <li>
-          <Link to="/brand">ブランド</Link>
-        </li>
-      </ul>
+      <LayoutLineList>{NavigaitonList}</LayoutLineList>
     </>
   );
 };

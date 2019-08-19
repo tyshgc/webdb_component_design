@@ -6,7 +6,7 @@
 import React from "react";
 
 // Components
-import { ListLayout, ListItemLayout } from "../../layouts";
+import { LayoutLineList, LayoutLineListItem } from "../../layouts";
 import { CategoryListItem } from "../elements";
 
 // Types
@@ -25,16 +25,16 @@ export const Categories = (props: Props) => {
       const { name, label } = category; //, childCategories
 
       return (
-        <ListItemLayout key={index}>
+        <LayoutLineListItem key={index}>
           <CategoryListItem {...{ name, label }} />
-        </ListItemLayout>
+        </LayoutLineListItem>
       );
     });
   };
 
   return (
-    <ListLayout>
+    <LayoutLineList>
       {CategoryList() || "カテゴリが登録されていません。"}
-    </ListLayout>
+    </LayoutLineList>
   );
 };

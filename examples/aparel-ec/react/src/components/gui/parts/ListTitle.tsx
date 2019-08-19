@@ -14,4 +14,7 @@ export const ListTitle = (props: Props) => {
   return <StyledTitle>{title || "タイトル未設定"}</StyledTitle>;
 };
 
-const StyledTitle = styled.strong``;
+const StyledTitle = styled.strong`
+  font-size: 1.6em;
+  font-weight: bold;
+`;

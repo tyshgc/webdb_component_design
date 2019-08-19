@@ -13,7 +13,8 @@ import styled from "styled-components";
 
 // Components
 import { ListItemGroup } from "../../gui/groups";
-import { BlockLayout } from "../../layouts";
+import { Price } from "../../gui/parts";
+import { Layout } from "../../layouts";
 
 // Types
 import {
@@ -35,18 +36,17 @@ export const ProductListItem = (props: Props) => {
 
   return (
     <ListItemGroup title={title} image={thumbnail}>
-      <BlockLayout hasMargin={hasMarginBottom}>
+      <Layout hasMargin={{ bottom: false }}>
         <StyledPrice>
-          <i>¥</i>
-          <strong>{priceLabel}</strong>
+          <Price value={priceLabel} />
         </StyledPrice>
-      </BlockLayout>
-      <BlockLayout hasMargin={hasMarginBottom}>
+      </Layout>
+      <Layout hasMargin={hasMarginBottom}>
         <StyledBrandName>
           <span>ブランド </span>
           <strong>{brandName}</strong>
         </StyledBrandName>
-      </BlockLayout>
+      </Layout>
     </ListItemGroup>
   );
 };

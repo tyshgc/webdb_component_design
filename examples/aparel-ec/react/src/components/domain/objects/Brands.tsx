@@ -6,7 +6,7 @@
 import React from "react";
 
 // Components
-import { ListLayout, ListItemLayout } from "../../layouts";
+import { LayoutList, LayoutListItem } from "../../layouts";
 import { BrandListItem } from "../elements";
 
 // Types
@@ -25,14 +25,14 @@ export const Brands = (props: Props) => {
       const { id, name, label, logoImage } = brand;
 
       return (
-        <ListItemLayout key={index}>
+        <LayoutListItem key={index}>
           <BrandListItem logo={logoImage} {...{ id, name, label }} />
-        </ListItemLayout>
+        </LayoutListItem>
       );
     });
   };
 
   return (
-    <ListLayout>{BrandList() || "ブランドが登録されていません。"}</ListLayout>
+    <LayoutList>{BrandList() || "ブランドが登録されていません。"}</LayoutList>
   );
 };

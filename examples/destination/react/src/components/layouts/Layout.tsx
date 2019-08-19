@@ -38,7 +38,9 @@ const StyledWrapper = styled.div`
     const getSpace = (bool?: boolean) => (bool ? `36px` : 0);
 
     return `
-      margin-bottom: ${getSpace(hasMargin.bottom || true)};
+      margin-bottom: ${getSpace(
+        typeof hasMargin.bottom === "boolean" ? hasMargin.bottom : true
+      )};
       margin-top: ${getSpace(hasMargin.top)};
       margin-right: ${getSpace(hasMargin.right)};
       margin-left: ${getSpace(hasMargin.left)};

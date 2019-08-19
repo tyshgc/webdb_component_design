@@ -7,7 +7,7 @@
 import React from "react";
 
 // Components
-import { BlockLayout } from "../../layouts";
+import { Layout } from "../../layouts";
 import { ListThumbnailImage, ListTitle } from "../parts/";
 interface Props {
   title?: string;
@@ -18,15 +18,15 @@ export const ListItemGroup = (props: Props) => {
   const { title, image, children } = props;
   const hasBottomMargin = { bottom: true };
   return (
-    <>
-      <BlockLayout hasMargin={hasBottomMargin}>
+    <div>
+      <Layout hasMargin={hasBottomMargin}>
         <ListThumbnailImage image={image} />
-      </BlockLayout>
-      <BlockLayout hasMargin={hasBottomMargin}>
+      </Layout>
+      <Layout hasMargin={hasBottomMargin}>
         <ListTitle title={title} />
-      </BlockLayout>
+      </Layout>
 
       <>{children}</>
-    </>
+    </div>
   );
 };

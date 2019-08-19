@@ -6,11 +6,13 @@ import React from "react";
 
 // Components
 import { ProductCollectionContainer } from "../containers";
+import { ScreenWrapper } from "../gui/parts";
 
 export const ProductsScreen = () => {
   return (
-    <section>
+    <ScreenWrapper>
+      <h1>商品</h1>
       <ProductCollectionContainer />
-    </section>
+    </ScreenWrapper>
   );
 };

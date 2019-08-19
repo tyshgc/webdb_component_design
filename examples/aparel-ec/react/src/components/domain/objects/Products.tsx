@@ -6,8 +6,9 @@
 import React from "react";
 
 // Components
-import { ListLayout, ListItemLayout } from "../../layouts";
+import { LayoutList, LayoutListItem } from "../../layouts";
 import { ProductListItem } from "../elements";
+import { NotFoundMessage } from "../../gui/parts";
 
 // Types
 import { typeProductList, typeProductListItem } from "aparel-ec";
@@ -18,16 +19,32 @@ interface Props {
 export const Products = (props: Props) => {
   const { products } = props;
 
-  const ProductList = () =>
-    products.map((product: typeProductListItem, index: number) => {
+  const ProductListItems = products.map(
+    (product: typeProductListItem, index: number) => {
       const { title, brandName, priceLabel, thumbnail } = product;
 
       return (
-        <ListItemLayout key={index}>
+        <LayoutListItem key={index}>
           <ProductListItem {...{ title, brandName, priceLabel, thumbnail }} />
-        </ListItemLayout>
+        </LayoutListItem>
       );
-    });
+    }
+  );
 
-  return <ListLayout>{ProductList()}</ListLayout>;
+  const ProductList = () => {
+    if (products.length === 0) return;
+    return <LayoutList>{ProductListItems}</LayoutList>;
+  };
+
+  const ProductNone = () => {
+    if (products.length > 0) return;
+    return <NotFoundMessage />;
+  };
+
+  return (
+    <LayoutList>
+      <>{ProductList()}</>
+      <>{ProductNone()}</>
+    </LayoutList>
+  );
 };

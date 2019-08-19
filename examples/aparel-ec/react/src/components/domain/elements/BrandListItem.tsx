@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 // Components
 import { ListItemGroup } from "../../gui/groups";
-import { BlockLayout } from "../../layouts";
+import { Layout } from "../../layouts";
 
 // Constants
 import { REFER_BRAND_LINK_LABEL } from "../../../constants";
@@ -32,9 +32,9 @@ export const BrandListItem = (props: Props) => {
 
   return (
     <ListItemGroup title={name} image={logo}>
-      <BlockLayout hasMargin={hasMarginBottom}>
+      <Layout hasMargin={hasMarginBottom}>
         <Link to={referLink}>{REFER_BRAND_LINK_LABEL}</Link>
-      </BlockLayout>
+      </Layout>
     </ListItemGroup>
   );
 };
