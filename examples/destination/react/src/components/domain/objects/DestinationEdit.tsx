@@ -14,7 +14,7 @@ import {
   PostalCodeEdit,
   RegistrationButton
 } from "../elements";
-import { Layout } from "../../layouts";
+import { Layout, LayoutSpacer } from "../../layouts";
 
 // Types
 import {
@@ -75,6 +75,7 @@ export const DestinationEdit = (props: Props) => {
       <Layout>
         <RegistrationButton onRegisted={onRegisted} />
       </Layout>
+      <LayoutSpacer height="40px" />
     </>
   );
 };

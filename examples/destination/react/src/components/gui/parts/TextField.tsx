@@ -19,7 +19,7 @@ export const TextField = (props: Props) => {
   const { defaultValue, placeholder, width, onChanged } = props;
 
   return (
-    <StyledFiled
+    <StyledField
       placeholder={placeholder || "入力してください…"}
       defaultValue={defaultValue}
       width={width}
@@ -29,7 +29,7 @@ export const TextField = (props: Props) => {
 };
 
 // input要素をTextFiled用のスタイルとしてラップ
-const StyledFiled = styled.input`
+const StyledField = styled.input`
   border: 1px solid #676767;
   border-radius: 6px;
   font-size: 1.4em;

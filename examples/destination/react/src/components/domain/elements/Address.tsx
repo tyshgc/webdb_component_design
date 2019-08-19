@@ -84,7 +84,11 @@ export const AddressEdit = (props: EditProps) => {
         />
       </FieldBlockWrapper>
       <FieldBlockWrapper heading={LABELS.CITY_STREET}>
-        <TextFieldGroup defaultValue={cityStreet} onChanged={onChanged} />
+        <TextFieldGroup
+          defaultValue={cityStreet}
+          onChanged={onChanged}
+          width="100%"
+        />
       </FieldBlockWrapper>
     </>
   );

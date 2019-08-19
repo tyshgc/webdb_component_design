@@ -45,15 +45,22 @@ export const PostalCode = (props: Props) => {
  * @lower 宛先の郵便番号 下四桁
  * @onChanged 宛先の郵便番号変更の際の入力変更イベント
  */
-// todo: hooksが必要
+
+// Constants
+const FIELD_WIDTH_SIZES = {
+  UPPER: "60px",
+  SEPARATION: "12px",
+  LOWER: "120px"
+};
+
 interface EditProps {
   upper?: typePostalCode["upper"];
   lower?: typePostalCode["lower"];
   onChanged?: typePostalCodeEvent;
 }
+
 export const PostalCodeEdit = (props: EditProps) => {
   const { upper, lower, onChanged } = props;
-
   const onUpperChanged = (res: React.BaseSyntheticEvent) => {
     if (!onChanged) return;
 
@@ -72,23 +79,23 @@ export const PostalCodeEdit = (props: EditProps) => {
     <FieldBlockWrapper heading={LABEL}>
       <StyledWrapper>
         <LayoutFlex justify="start">
-          <LayoutFlexItem column="60px">
-            <StyledPostalCodeUpper
+          <LayoutFlexItem column={FIELD_WIDTH_SIZES.UPPER}>
+            <TextField
               defaultValue={upper}
               placeholder=" "
               onChanged={onUpperChanged}
-              width="60px"
+              width={FIELD_WIDTH_SIZES.UPPER}
             />
           </LayoutFlexItem>
-          <LayoutFlexItem column="12px">
+          <LayoutFlexItem column={FIELD_WIDTH_SIZES.SEPARATION}>
             <StyledSeparationBar>-</StyledSeparationBar>
           </LayoutFlexItem>
-          <LayoutFlexItem column="120px">
-            <StyledPostalCodeLower
+          <LayoutFlexItem column={FIELD_WIDTH_SIZES.LOWER}>
+            <TextField
               defaultValue={lower}
               placeholder=" "
               onChanged={onLowerChanged}
-              width="120px"
+              width={FIELD_WIDTH_SIZES.LOWER}
             />
           </LayoutFlexItem>
         </LayoutFlex>
@@ -104,5 +111,3 @@ const StyledWrapper = styled.div`
 const StyledSeparationBar = styled.div`
   text-align: center;
 `;
-const StyledPostalCodeUpper = styled(TextField)``;
-const StyledPostalCodeLower = styled(TextField)``;

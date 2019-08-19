@@ -19,11 +19,12 @@ import { InlineLabel, TextField } from "../parts/";
 interface Props {
   inlineLabel?: string;
   defaultValue?: string;
+  width?: number | string;
   onChanged?: (res: React.BaseSyntheticEvent) => void;
 }
 
 export const TextFieldGroup = (props: Props) => {
-  const { inlineLabel, defaultValue, onChanged } = props;
+  const { inlineLabel, defaultValue, onChanged, width } = props;
   const fieldSize = inlineLabel ? "80%" : undefined;
   const InlineLabelFlex = () => {
     if (!inlineLabel) return;
@@ -33,13 +34,25 @@ export const TextFieldGroup = (props: Props) => {
       </LayoutFlexItem>
     );
   };
+  const Field = () => (
+    <TextField
+      defaultValue={defaultValue}
+      onChanged={onChanged}
+      width={width}
+    />
+  );
+  const FlexField = () => {
+    if (!inlineLabel) {
+      return <>{Field()}</>;
+    }
+
+    return <LayoutFlexItem column={fieldSize}>{Field()}</LayoutFlexItem>;
+  };
 
   return (
     <LayoutFlex>
       {InlineLabelFlex()}
-      <LayoutFlexItem column={fieldSize}>
-        <TextField defaultValue={defaultValue} onChanged={onChanged} />
-      </LayoutFlexItem>
+      {FlexField()}
     </LayoutFlex>
   );
 };
