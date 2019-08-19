@@ -1,11 +1,12 @@
 <template>
     <LayoutFlex>
-      <LayoutFlexItem :column="1">
+      <LayoutFlexItem v-if="inlineLabel" :column="'20%'" >
         <InlineLabel :text="inlineLabel" />
       </LayoutFlexItem>
-      <LayoutFlexItem :column="2">
-        <TextField :default-value="defaultValue" :on-changed="onChanged" />
+      <LayoutFlexItem v-if="inlineLabel" :column="fieldSize">
+        <TextField :default-value="defaultValue" :on-changed="onChanged" :width="width" />
       </LayoutFlexItem>
+      <TextField v-else :default-value="defaultValue" :on-changed="onChanged" :width="width" />
     </LayoutFlex>
 </template>
 
@@ -27,13 +28,19 @@ export default {
     props: {
         inlineLabel: String,
         defaultValue: String,
-        onChanged: Function
+        onChanged: Function,
+        width: [Number, String]
     },
     components: {
         LayoutFlex, 
         LayoutFlexItem,
         InlineLabel, 
         TextField
+    },
+    computed: {
+      fieldSize() {
+        return this.inlineLabel ? "80%" : undefined;
+      }
     }
 }
 </script>

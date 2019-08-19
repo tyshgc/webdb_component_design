@@ -14,8 +14,22 @@
  */
 import styled from "vue-styled-components";
 
+const StyledWrapperProps = {
+    hasPadding: {
+        left: Boolean,
+        top: Boolean,
+        right: Boolean,
+        bottom: Boolean
+    }, 
+    hasMargin: {
+        left: Boolean,
+        top: Boolean,
+        right: Boolean,
+        bottom: Boolean
+    }
+}
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled("div", StyledWrapperProps)`
   ${props => {
     const hasMargin = props.hasMargin || {};
     const hasPadding = props.hasPadding || {};
@@ -38,20 +52,7 @@ const StyledWrapper = styled.div`
 
 export default {
     name: "Layout",
-    props: {
-        hasPadding: {
-            left: Boolean,
-            top: Boolean,
-            right: Boolean,
-            bottom: Boolean
-        }, 
-        hasMargin: {
-            left: Boolean,
-            top: Boolean,
-            right: Boolean,
-            bottom: Boolean
-        }
-    },
+    props: StyledWrapperProps,
     components: {
         StyledWrapper
     }

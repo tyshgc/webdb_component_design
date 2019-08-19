@@ -1,5 +1,7 @@
 <template>
-    <div><slot /></div>
+    <styled-flex :column="column">
+        <slot />
+    </styled-flex>
 </template>
 
 <script>
@@ -9,11 +11,23 @@
  * @column カラムの数
  * @slot ラップする中身
  */
+import styled from "vue-styled-components";
+
+const StyleFlexProps = {column: [Number, String]}
+const StyledFlex = styled('div', StyleFlexProps)`
+    
+  ${props => {
+    if (!props.column) return;
+    return `flex: ${props.column}`;
+  }}
+`;
+
 
 export default {
     name: "LayoutFlexItem",
-    prop: {
-        column: Number
+    props: StyleFlexProps,
+    components: {
+        StyledFlex
     }
 }
 </script>

@@ -13,9 +13,5 @@ interface Props {
 }
 export const RegistrationButton = (props: Props) => {
   const { onRegisted } = props;
-  return (
-    <>
-      <Button label="登録する" onPushed={onRegisted} />
-    </>
-  );
+  return <Button label="登録する" onPushed={onRegisted} />;
 };

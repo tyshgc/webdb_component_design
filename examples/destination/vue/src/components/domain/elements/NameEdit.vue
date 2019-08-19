@@ -1,19 +1,19 @@
 <template>
     <FieldBlockWrapper :heading="FIELDNAME.NAME">
-      <div>
+      <Layout>
         <TextFieldGroup
           :inline-label="FIELDNAME.LASTNAME"
           :default-value="lastName"
           :on-changed="onLastNameChanged"
         />
-      </div>
-      <div>
+      </Layout>
+      <Layout>
         <TextFieldGroup
           :inline-label="FIELDNAME.FIRSTNAME"
           :default-value="firstName"
           :on-changed="onFirstNameChanged"
         />
-      </div>
+      </Layout>
     </FieldBlockWrapper>
 </template>
 
@@ -31,6 +31,7 @@ import { canChangeEvent } from "@/utils/canChangeEvent";
 // Components
 import { TextFieldGroup } from "@/components/gui/groups"
 import { FieldBlockWrapper } from "@/components/gui/parts";
+import { Layout } from "@/components/layouts";
 
 // Enum
 import { NAME_TYPE } from "@/enum";
@@ -58,7 +59,8 @@ export default {
     },
     components: {
         FieldBlockWrapper,
-        TextFieldGroup 
+        TextFieldGroup,
+        Layout
     }
 }
 </script>

@@ -10,6 +10,12 @@ import { Layout, LayoutFlex, LayoutFlexItem } from "../../layouts";
 // Svg
 import HamburgerMenu from "../../../assets/svg/HamburgerMenu";
 
+// Constants
+const LAYOUT_OPTION = {
+  MARGIN: {},
+  PADDING: { left: true, right: true }
+};
+
 interface Props {
   children: React.ReactNode;
   pageTitle?: string;
@@ -17,10 +23,7 @@ interface Props {
 
 export const ScreenWrapper = (props: Props) => {
   const { children, pageTitle } = props;
-  const layoutOption = {
-    margin: {},
-    padding: { left: true, right: true }
-  };
+
   return (
     <>
       <StyledNavBar>
@@ -34,8 +37,8 @@ export const ScreenWrapper = (props: Props) => {
       </StyledNavBar>
       <StyledMain>
         <Layout
-          hasMargin={layoutOption.margin}
-          hasPadding={layoutOption.padding}
+          hasMargin={LAYOUT_OPTION.MARGIN}
+          hasPadding={LAYOUT_OPTION.PADDING}
         >
           {children}
         </Layout>

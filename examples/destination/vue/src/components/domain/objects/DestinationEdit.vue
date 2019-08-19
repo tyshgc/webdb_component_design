@@ -24,6 +24,7 @@
         <Layout>
             <RegistrationButton :on-registed="onRegisted" />
         </Layout>
+        <LayoutSpacer :height="'40px'" />
     </div>
 </template>
 
@@ -44,7 +45,7 @@ import {
     PostalCodeEdit, 
     RegistrationButton 
 } from "@/components/domain/elements";
-import { Layout } from "@/components/layouts";
+import { Layout, LayoutSpacer } from "@/components/layouts";
 
 export default {
     name: "DestinationEdit",
@@ -72,7 +73,8 @@ export default {
         NameEdit, 
         PostalCodeEdit,
         RegistrationButton,
-        Layout 
+        Layout,
+        LayoutSpacer
     }
 }
 </script>

@@ -1,24 +1,28 @@
 <template>
     <FieldBlockWrapper :heading="FIELDNAME.POSTALCODE">
-      <LayoutFlex>
-        <LayoutFlexItem>
-          <StyledPostalCodeUpper>
+      <StyledWrapper>
+        <LayoutFlex :justify="'start'">
+          <LayoutFlexItem :column="fieldWidthSizes.UPPER">
             <TextField
               :default-value="upper"
+              :placeholder="' '"
               :on-changed="onUpperChanged"
+              :width="fieldWidthSizes.UPPER"
             />
-          </StyledPostalCodeUpper>
-        </LayoutFlexItem>
-        <LayoutFlexItem>-</LayoutFlexItem>
-        <LayoutFlexItem>
-          <StyledPostalCodeLower>
+          </LayoutFlexItem>
+          <LayoutFlexItem :column="fieldWidthSizes.SEPARATION">
+            <StyledSeparationBar>-</StyledSeparationBar>
+          </LayoutFlexItem>
+          <LayoutFlexItem :column="fieldWidthSizes.LOWER">
             <TextField
               :defaule-value="lower"
+              :placeholder="' '"
               :on-changed="onLowerChanged"
+              :width="fieldWidthSizes.LOWER"
             />
-          </StyledPostalCodeLower>
-        </LayoutFlexItem>
-      </LayoutFlex>
+          </LayoutFlexItem>
+        </LayoutFlex>
+      </StyledWrapper>
     </FieldBlockWrapper>
 </template>
 
@@ -40,13 +44,21 @@ import { FieldBlockWrapper, TextField } from "@/components/gui/parts";
 
 // Constants
 import CONSTANTS from "@/constants";
-
+const FIELD_WIDTH_SIZES = {
+  UPPER: "60px",
+  SEPARATION: "12px",
+  LOWER: "120px"
+};
 // Enum
 import { POSTALCODE_TYPE } from "@/enum";
 
-// Styled
-const StyledPostalCodeUpper = styled.div``;
-const StyledPostalCodeLower = styled.div``;
+const StyledWrapper = styled.div`
+  width: 80%;
+  max-width: 240px;
+`;
+const StyledSeparationBar = styled.div`
+  text-align: center;
+`;
 
 export default {
     name: "PostalCodeEdit",
@@ -55,6 +67,11 @@ export default {
         upper: String,
         lower: String,
         onChanged: Function
+    },
+    computed: {
+      fieldWidthSizes() { 
+        return FIELD_WIDTH_SIZES
+      }
     },
     methods: {
         onUpperChanged(res) {
@@ -70,9 +87,9 @@ export default {
         LayoutFlex, 
         LayoutFlexItem,
         FieldBlockWrapper, 
-        StyledPostalCodeUpper,
-        StyledPostalCodeLower,
-        TextField
+        TextField,
+        StyledWrapper,
+        StyledSeparationBar
     }
 }
 </script>

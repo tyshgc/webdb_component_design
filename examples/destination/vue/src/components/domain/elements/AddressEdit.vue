@@ -11,6 +11,7 @@
             <TextFieldGroup 
                 :default-value="cityStreet" 
                 :on-changed="onCityStreetChanged" 
+                :width="'100%'"
             />
         </FieldBlockWrapper>
     </div>

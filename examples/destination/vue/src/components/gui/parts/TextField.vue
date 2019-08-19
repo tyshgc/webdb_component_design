@@ -2,6 +2,7 @@
     <StyledFiled
       :placeholder="placeholder || '入力してください…'"
       :value="text"
+      :width="width"
       @input="onInputed"
     />
 </template>
@@ -18,12 +19,16 @@
 import styled from "vue-styled-components";
 
 // input要素をTextFiled用のスタイルとしてラップ
-const StyledFiled = styled.input`
+const StyledFieldProps = {
+  width: [Number, String],
+}
+const StyledFiled = styled("input", StyledFieldProps)`
   border: 1px solid #676767;
   border-radius: 6px;
   font-size: 1.4em;
   outline: none;
   padding: 10px 8px 8px;
+  width: ${(props) => props.width || "auto"};
 `;
 
 export default {
@@ -34,6 +39,7 @@ export default {
       }
     },
     props: {
+        ...StyledFieldProps,
         defaultValue: String,
         placeholder: String,
         onChanged: Function
