@@ -26,11 +26,9 @@ export const CategoryListItem = (props: Props) => {
   const referLink = `/category/${label}`;
 
   return (
-    <>
-      <StyledLink to={referLink}>
-        <ListTitle title={name} />
-      </StyledLink>
-    </>
+    <StyledLink to={referLink}>
+      <ListTitle title={name} />
+    </StyledLink>
   );
 };
 

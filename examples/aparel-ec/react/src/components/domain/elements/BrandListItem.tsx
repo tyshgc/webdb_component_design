@@ -7,7 +7,8 @@
  * @onRefered 任意ブランド参照する際のイベント
  */
 import React from "react";
-import { Link } from "react-router-dom";
+import useReactRouter from "use-react-router";
+import styled from "styled-components";
 
 // Components
 import { ListItemGroup } from "../../gui/groups";
@@ -29,12 +30,18 @@ export const BrandListItem = (props: Props) => {
   const { name, label, logo } = props;
   const hasMarginBottom = { bottom: true };
   const referLink = `/brand/${label}`;
+  const { history } = useReactRouter();
+  const onScreenTransition = () => history.push(referLink);
 
   return (
-    <ListItemGroup title={name} image={logo}>
+    <ListItemGroup title={name} image={logo} onClicked={onScreenTransition}>
       <Layout hasMargin={hasMarginBottom}>
-        <Link to={referLink}>{REFER_BRAND_LINK_LABEL}</Link>
+        <StyledTransitionLabel>{REFER_BRAND_LINK_LABEL}</StyledTransitionLabel>
       </Layout>
     </ListItemGroup>
   );
 };
+
+const StyledTransitionLabel = styled.span`
+  font-size: 0.8em;
+`;

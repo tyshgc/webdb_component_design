@@ -18,6 +18,9 @@ export const LayoutListItem = (props: Props) => {
 
 const StyledListItem = styled.li`
   list-style-type: none;
+  text-align: center;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.5);
+  padding-top: 16px;
 
   ${(props: StyledProps) => {
     if (!props.column) return;

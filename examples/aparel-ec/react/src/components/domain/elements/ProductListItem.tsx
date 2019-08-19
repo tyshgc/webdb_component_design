@@ -37,29 +37,21 @@ export const ProductListItem = (props: Props) => {
   return (
     <ListItemGroup title={title} image={thumbnail}>
       <Layout hasMargin={{ bottom: false }}>
-        <StyledPrice>
-          <Price value={priceLabel} />
-        </StyledPrice>
+        <Price value={priceLabel} />
       </Layout>
       <Layout hasMargin={hasMarginBottom}>
-        <StyledBrandName>
-          <span>ブランド </span>
-          <strong>{brandName}</strong>
-        </StyledBrandName>
+        <StyledBrandLabel>ブランド </StyledBrandLabel>
+        <StyledBrandName>{brandName}</StyledBrandName>
       </Layout>
     </ListItemGroup>
   );
 };
 
-const StyledPrice = styled.div`
-  & > i {
-  }
-  & > strong {
-  }
+const StyledBrandLabel = styled.span`
+  font-size: 0.8em;
+  color: #666;
 `;
-const StyledBrandName = styled.div`
-  & > span {
-  }
-  & > strong {
-  }
+const StyledBrandName = styled.strong`
+  font-size: 1em;
+  font-weight: bold;
 `;
