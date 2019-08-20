@@ -5,7 +5,7 @@
 import React from "react";
 
 // Components
-import { ProductsByBrandContainer } from "../containers";
+import { ProductCollectionByBrandContainer } from "../containers";
 import { ScreenWrapper } from "../gui/parts";
 
 export const BrandDetailScreen = (props: any) => {
@@ -14,7 +14,7 @@ export const BrandDetailScreen = (props: any) => {
   return (
     <ScreenWrapper>
       <h1>カテゴリ詳細</h1>
-      <ProductsByBrandContainer label={label} />
+      <ProductCollectionByBrandContainer label={label} />
     </ScreenWrapper>
   );
 };

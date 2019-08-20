@@ -5,7 +5,7 @@
 import React from "react";
 
 // Components
-import { ProductsByCategoryContainer } from "../containers";
+import { ProductCollectionByCategoryContainer } from "../containers";
 import { ScreenWrapper } from "../gui/parts";
 
 export const CategoryDetailScreen = (props: any) => {
@@ -14,7 +14,7 @@ export const CategoryDetailScreen = (props: any) => {
   return (
     <ScreenWrapper>
       <h1>カテゴリ詳細</h1>
-      <ProductsByCategoryContainer label={label} />
+      <ProductCollectionByCategoryContainer label={label} />
     </ScreenWrapper>
   );
 };

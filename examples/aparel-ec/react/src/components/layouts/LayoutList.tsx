@@ -1,6 +1,9 @@
 /**
  * リスト用レイアウト
  * ListLayout Component
+ * @direction Flexの方向 {default: row}
+ * @justify Flexの横方向の間隔 {default: space-between}
+ * @verticalAlign Flexの縦方向の整列 {default: center}
  */
 import React from "react";
 import styled from "styled-components";
@@ -11,7 +14,6 @@ import {
 } from "csstype";
 
 interface StyledProps {
-  height?: String | number;
   direction?: FlexDirectionProperty;
   justify?: JustifyContentProperty;
   verticalAlign?: BoxAlignProperty;
@@ -20,8 +22,12 @@ interface Props extends StyledProps {
   children: React.ReactNode;
 }
 export const LayoutList = (props: Props) => {
-  const { children } = props;
-  return <StyledFlexUl>{children}</StyledFlexUl>;
+  const { direction, justify, verticalAlign, children } = props;
+  return (
+    <StyledFlexUl {...{ direction, justify, verticalAlign }}>
+      {children}
+    </StyledFlexUl>
+  );
 };
 
 const StyledFlexUl = styled.ul`

@@ -5,14 +5,14 @@
 import React from "react";
 
 // Components
-import { BrandsContainer } from "../containers";
+import { BrandCollectionContainer } from "../containers";
 import { ScreenWrapper } from "../gui/parts";
 
 export const BrandsScreen = () => {
   return (
     <ScreenWrapper>
       <h1>ブランド一覧</h1>
-      <BrandsContainer />
+      <BrandCollectionContainer />
     </ScreenWrapper>
   );
 };

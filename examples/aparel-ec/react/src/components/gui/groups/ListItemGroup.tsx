@@ -1,14 +1,15 @@
 /**
  * ListItemのグループ
  * ListItemGroup GUI Group Component
- * @title
- * @imageURL
+ * @title リストのタイトル
+ * @image 画像のURL
  */
 import React from "react";
 
 // Components
 import { Layout } from "../../layouts";
 import { ListThumbnailImage, ListTitle } from "../parts/";
+
 interface Props {
   title?: string;
   image?: string;

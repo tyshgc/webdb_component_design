@@ -13,10 +13,10 @@ interface Props {
 }
 export const ScreenTransition = (props: Props) => {
   const { screenName, screenLabel, children } = props;
+  if (!children && !screenLabel) return <></>;
+
   const to = `/${screenName}`;
-  return (
-    <StyledLink to={to}>{children || screenLabel || "遷移する"}</StyledLink>
-  );
+  return <StyledLink to={to}>{children || screenLabel}</StyledLink>;
 };
 
 const StyledLink = styled(Link)`

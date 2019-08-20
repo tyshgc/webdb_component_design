@@ -1,6 +1,7 @@
 /**
  * 任意カテゴリ
  * Category Domain Object
+ * @name カテゴリ名
  */
 import React from "react";
 

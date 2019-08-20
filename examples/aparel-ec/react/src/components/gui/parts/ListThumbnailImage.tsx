@@ -1,12 +1,12 @@
 /**
  * ListThumbnailImage
- * @imageURL
+ * @image 画像のURL
  */
 import React from "react";
 import styled from "styled-components";
 
 // Constants
-const THUMBS_IMAGE_SIZE = 160;
+import { THUMBS_IMAGE_SIZE } from "../../../constants";
 
 interface Props {
   image?: string;

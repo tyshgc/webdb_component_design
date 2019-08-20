@@ -1,6 +1,7 @@
 /**
  * リストアイテム用レイアウト
  * ListItemLayout Component
+ * @column カラムの幅
  */
 import React from "react";
 import styled from "styled-components";

@@ -33,9 +33,9 @@ export const Navigation = () => {
     </LayoutLineListItem>
   ));
   return (
-    <>
+    <section>
       <h1>メニュー</h1>
       <LayoutLineList>{NavigaitonList}</LayoutLineList>
-    </>
+    </section>
   );
 };
