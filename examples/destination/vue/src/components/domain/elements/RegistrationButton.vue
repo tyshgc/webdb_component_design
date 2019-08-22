@@ -1,5 +1,5 @@
 <template>
-    <Button :label="'登録する'" :on-pushed="onRegisted" />
+    <submit-button :label="'登録する'" :on-pushed="onRegisted" />
 </template>
 
 <script>
@@ -10,7 +10,7 @@
  */
 
 //Components
-import { Button } from "../../gui/parts";
+import { SubmitButton } from "@/components/gui/parts";
 
 export default {
     name: "RegistrationButton",
@@ -18,7 +18,7 @@ export default {
         onRegisted: Function
     },
     components: {
-        Button
+        SubmitButton
     }
 }
 </script>

@@ -1,11 +1,11 @@
 <template>
-    <StyledButton @click="onClick">{{label}}</StyledButton>
+    <styled-button @click="onClick">{{label}}</styled-button>
 </template>
 
 <script>
 /**
- * ボタン
- * Button GUI parts Component
+ * サブミットボタン
+ * Submit Button GUI parts Component
  * @label ボタンのラベル
  * @onPushed ボタン押下時のイベント
  */
@@ -23,7 +23,7 @@ const StyledButton = styled.button`
 `;
 
 export default {
-    name: "Button",
+    name: "SubmitButton",
     props: {
         label: {
             type: String,

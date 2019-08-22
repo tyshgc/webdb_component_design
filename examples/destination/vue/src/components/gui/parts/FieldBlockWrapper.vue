@@ -1,8 +1,8 @@
 <template>
-    <StyledWrapper v-if="heading">
-      <StyledHeading>{{heading}}</StyledHeading>
+    <styled-Wrapper v-if="heading">
+      <styled-heading>{{heading}}</styled-heading>
       <div><slot /></div>
-    </StyledWrapper>
+    </styled-Wrapper>
 </template>
 
 <script>

@@ -1,30 +1,30 @@
 <template>
     <div>
-        <Layout>
-            <NameEdit 
+        <layout>
+            <name-edit 
                 :on-changed="name.onChanged" 
                 :first-name="name.firstName" 
                 :last-name="name.lastName" />
-        </Layout>
-        <Layout>
-            <PostalCodeEdit
+        </layout>
+        <layout>
+            <postal-code-edit
                 :onChanged="postalCode.onChanged"
                 :upper="postalCode.upper"
                 :lower="postalCode.lower"
             />
-        </Layout>
-        <Layout>
-            <AddressEdit
+        </layout>
+        <layout>
+            <address-set-edit
                 :on-selected-prefecture="address.onSelectedPrefecture"
                 :on-city-street-changed="address.onCityStreetChanged"
                 :prefecture="address.prefecture"
                 :city-street="address.cityStreet"
             />
-        </Layout>
-        <Layout>
-            <RegistrationButton :on-registed="onRegisted" />
-        </Layout>
-        <LayoutSpacer :height="'40px'" />
+        </layout>
+        <layout>
+            <registration-button :on-registed="onRegisted" />
+        </layout>
+        <layout-spacer :height="'40px'" />
     </div>
 </template>
 
@@ -40,7 +40,7 @@
 
 // Components
 import { 
-    AddressEdit, 
+    AddressSetEdit, 
     NameEdit, 
     PostalCodeEdit, 
     RegistrationButton 
@@ -69,7 +69,7 @@ export default {
         onRegisted: Function
     },
     components: {
-        AddressEdit, 
+        AddressSetEdit, 
         NameEdit, 
         PostalCodeEdit,
         RegistrationButton,

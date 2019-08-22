@@ -1,5 +1,5 @@
 <template>
-    <StyledSelectBox
+    <styled-select-box
       :selected="choice"
       @change="onSelect"
     >
@@ -9,7 +9,7 @@
       <option v-for="(choice, key, index) in choices" :key="index">
         {{choice}}
       </option>
-    </StyledSelectBox>
+    </styled-select-box>
 </template>
 
 <script>

@@ -1,11 +1,11 @@
 <template>
-    <StyledFlexBox 
+    <styled-flex-box 
         :direction="direction" 
         :justify="justify" 
         :vertical-align="verticalAlign" 
         :height="height">
         <slot />
-    </StyledFlexBox>
+    </styled-flex-box>
 </template>
 
 <script>

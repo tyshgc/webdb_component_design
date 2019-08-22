@@ -1,22 +1,22 @@
 <template>
     <div>
-        <StyledNavBar>
-            <LayoutFlex :height="'100%'">
-              <LayoutFlexItem :column="'80px'">
-                <DrawerTrigger />
-              </LayoutFlexItem>
-              <LayoutFlexItem :column="'100%'">
-                <PageTitle :title="pageTitle" />
-              </LayoutFlexItem>
-              <LayoutFlexItem :column="'80px'" />
-            </LayoutFlex>
-        </StyledNavBar>
+        <styled-nav-bar>
+            <layout-flex :height="'100%'">
+              <layout-flex-item :column="'80px'">
+                <drawer-trigger />
+              </layout-flex-item>
+              <layout-flex-item :column="'100%'">
+                <page-title :title="pageTitle" />
+              </layout-flex-item>
+              <layout-flex-item :column="'80px'" />
+            </layout-flex>
+        </styled-nav-bar>
 
-        <StyledMain>
-          <Layout :has-margin="hasMargin" :has-padding="hasPadding">
+        <styled-main>
+          <layout :has-margin="hasMargin" :has-padding="hasPadding">
             <slot />
-          </Layout>
-        </StyledMain>
+          </layout>
+        </styled-main>
     </div>
 </template>
 

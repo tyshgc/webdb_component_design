@@ -1,5 +1,5 @@
 <template>
-    <StyledHeadingOne>{{text}}</StyledHeadingOne>
+    <styled-heading-one>{{text}}</styled-heading-one>
 </template>
 
 <script>

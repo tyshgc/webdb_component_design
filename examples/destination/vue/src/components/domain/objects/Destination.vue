@@ -1,16 +1,16 @@
 <template>
     <div>
-        <Layout>
-            <Name :full-name="name" />
-        </Layout>
+        <layout>
+            <name :full-name="name" />
+        </layout>
 
-        <Layout>
-            <PostalCode :code="postalCode" />
-        </Layout>
+        <layout>
+            <postal-code :code="postalCode" />
+        </layout>
 
-        <Layout>
-            <Address :address="address" />
-        </Layout>
+        <layout>
+            <address-set :address="address" />
+        </layout>
     </div>
 </template>
 
@@ -24,7 +24,7 @@
  */
 
 // Components
-import { Address, Name, PostalCode } from "@/components/domain/elements";
+import { AddressSet, Name, PostalCode } from "@/components/domain/elements";
 import { Layout } from "@/components/layouts";
 
 
@@ -36,7 +36,7 @@ export default {
         address: String
     },
     components: {
-        Address, 
+        AddressSet, 
         Name, 
         PostalCode, 
         Layout 

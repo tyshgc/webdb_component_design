@@ -1,19 +1,19 @@
 <template>
     <div>
-        <FieldBlockWrapper :heading="FIELDNAME.PREFECTURE">
-            <SelectBox
+        <field-block-wrapper :heading="FIELDNAME.PREFECTURE">
+            <select-box
                 :choices="PREFECTURES"
                 :selected="prefecture"
                 :on-selected="onSelectedPrefecture"
             />
-        </FieldBlockWrapper>
-        <FieldBlockWrapper :heading="FIELDNAME.CITYSTREET">
-            <TextFieldGroup 
+        </field-block-wrapper>
+        <field-block-wrapper :heading="FIELDNAME.CITYSTREET">
+            <text-field-group 
                 :default-value="cityStreet" 
                 :on-changed="onCityStreetChanged" 
                 :width="'100%'"
             />
-        </FieldBlockWrapper>
+        </field-block-wrapper>
     </div>
 </template>
 
@@ -34,7 +34,7 @@ import { TextFieldGroup } from "@/components/gui/groups"
 import { FieldBlockWrapper, SelectBox } from "@/components/gui/parts";
 
 export default {
-    name: "AddressEdit",
+    name: "AddressSetEdit",
     mixins: [CONSTANTS],
     props: {
         prefecture: String,

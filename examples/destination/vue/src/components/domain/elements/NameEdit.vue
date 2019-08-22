@@ -1,20 +1,20 @@
 <template>
-    <FieldBlockWrapper :heading="FIELDNAME.NAME">
-      <Layout>
-        <TextFieldGroup
+    <field-block-wrapper :heading="FIELDNAME.NAME">
+      <layout>
+        <text-field-group
           :inline-label="FIELDNAME.LASTNAME"
           :default-value="lastName"
           :on-changed="onLastNameChanged"
         />
-      </Layout>
-      <Layout>
-        <TextFieldGroup
+      </layout>
+      <layout>
+        <text-field-group
           :inline-label="FIELDNAME.FIRSTNAME"
           :default-value="firstName"
           :on-changed="onFirstNameChanged"
         />
-      </Layout>
-    </FieldBlockWrapper>
+      </layout>
+    </field-block-wrapper>
 </template>
 
 <script>

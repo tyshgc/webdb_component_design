@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Heading text="宛先" />
+        <heading text="宛先" />
         <ul>
             <li>
                 <router-link to="/reference">確認</router-link>

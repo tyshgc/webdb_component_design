@@ -1,5 +1,5 @@
 <template>
-    <StyledFiled
+    <styled-filed
       :placeholder="placeholder || '入力してください…'"
       :value="text"
       :width="width"

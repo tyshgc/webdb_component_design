@@ -1,4 +1,4 @@
-import Button from "./Button.vue";
+import SubmitButton from "./SubmitButton.vue";
 import DrawerTrigger from "./DrawerTrigger";
 import FieldBlockWrapper from "./FieldBlockWrapper.vue";
 import Heading from "./Heading.vue";
@@ -8,7 +8,7 @@ import SelectBox from "./SelectBox.vue";
 import TextField from "./TextField.vue";
 
 export {
-  Button,
+  SubmitButton,
   DrawerTrigger,
   FieldBlockWrapper,
   Heading,

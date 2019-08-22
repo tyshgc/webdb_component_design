@@ -1,29 +1,29 @@
 <template>
-    <FieldBlockWrapper :heading="FIELDNAME.POSTALCODE">
-      <StyledWrapper>
-        <LayoutFlex :justify="'start'">
-          <LayoutFlexItem :column="fieldWidthSizes.UPPER">
-            <TextField
+    <field-block-wrapper :heading="FIELDNAME.POSTALCODE">
+      <styled-wrapper>
+        <layout-flex :justify="'start'">
+          <layout-flex-item :column="fieldWidthSizes.UPPER">
+            <textField
               :default-value="upper"
               :placeholder="' '"
               :on-changed="onUpperChanged"
               :width="fieldWidthSizes.UPPER"
             />
-          </LayoutFlexItem>
-          <LayoutFlexItem :column="fieldWidthSizes.SEPARATION">
+          </layout-flex-item>
+          <layout-flex-item :column="fieldWidthSizes.SEPARATION">
             <StyledSeparationBar>-</StyledSeparationBar>
-          </LayoutFlexItem>
-          <LayoutFlexItem :column="fieldWidthSizes.LOWER">
-            <TextField
+          </layout-flex-item>
+          <layout-flex-item :column="fieldWidthSizes.LOWER">
+            <text-field
               :defaule-value="lower"
               :placeholder="' '"
               :on-changed="onLowerChanged"
               :width="fieldWidthSizes.LOWER"
             />
-          </LayoutFlexItem>
-        </LayoutFlex>
-      </StyledWrapper>
-    </FieldBlockWrapper>
+          </layout-flex-item>
+        </layout-flex>
+      </styled-wrapper>
+    </field-block-wrapper>
 </template>
 
 <script>

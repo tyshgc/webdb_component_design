@@ -1,8 +1,8 @@
 <template>
-    <FieldBlockWrapper :heading="FIELDNAME.POSTALCODE">
+    <field-block-wrapper :heading="FIELDNAME.POSTALCODE">
         <strong v-if="code">{{code}}</strong>
         <span v-else>未記入</span>
-    </FieldBlockWrapper>
+    </field-block-wrapper>
 </template>
 
 <script>

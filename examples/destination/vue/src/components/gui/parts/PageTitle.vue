@@ -1,5 +1,5 @@
 <template>
-    <StyledTitle>{{title}}</StyledTitle>
+    <styled-title>{{title}}</styled-title>
 </template>
 
 <script>

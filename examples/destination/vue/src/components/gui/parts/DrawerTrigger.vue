@@ -1,7 +1,7 @@
 <template>
-    <StyledLeft @click="onDummy">
-      <HamburgerMenu />
-    </StyledLeft>
+    <styled-left @click="onDummy">
+      <hamburger-menu />
+    </styled-left>
 </template>
 
 <script>

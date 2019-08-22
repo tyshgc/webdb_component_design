@@ -1,13 +1,13 @@
 <template>
-    <LayoutFlex>
-      <LayoutFlexItem v-if="inlineLabel" :column="'20%'" >
-        <InlineLabel :text="inlineLabel" />
-      </LayoutFlexItem>
-      <LayoutFlexItem v-if="inlineLabel" :column="fieldSize">
-        <TextField :default-value="defaultValue" :on-changed="onChanged" :width="width" />
-      </LayoutFlexItem>
-      <TextField v-else :default-value="defaultValue" :on-changed="onChanged" :width="width" />
-    </LayoutFlex>
+    <layout-flex>
+      <layout-flex-item v-if="inlineLabel" :column="'32px'" >
+        <inline-label :text="inlineLabel" />
+      </layout-flex-item>
+      <layout-flex-item v-if="inlineLabel" :column="fieldSize">
+        <text-field :default-value="defaultValue" :on-changed="onChanged" :width="width" />
+      </layout-flex-item>
+      <text-field v-else :default-value="defaultValue" :on-changed="onChanged" :width="width" />
+    </layout-flex>
 </template>
 
 <script>

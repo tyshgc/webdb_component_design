@@ -1,7 +1,7 @@
 <template>
-    <ScreenWrapper pageTitle="宛先">
-        <DestinationContainer />
-    </ScreenWrapper>
+    <screen-wrapper page-title="宛先">
+        <destination-container />
+    </screen-wrapper>
 </template>
 
 <script>

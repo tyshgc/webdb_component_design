@@ -1,5 +1,5 @@
 <template>
-    <StyledSpacer :height="height" />
+    <styled-spacer :height="height" />
 </template>
 
 <script>

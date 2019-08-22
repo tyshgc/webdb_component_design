@@ -1,8 +1,8 @@
 <template>
-    <FieldBlockWrapper :heading="FIELDNAME.NAME">
+    <field-block-wrapper :heading="FIELDNAME.NAME">
         <strong v-if="fullName">{{fullName}}</strong>
         <span v-else>未記入</span>
-    </FieldBlockWrapper>
+    </field-block-wrapper>
 </template>
 
 <script>

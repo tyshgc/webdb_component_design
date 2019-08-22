@@ -1,7 +1,7 @@
 <template>
-    <ScreenWrapper pageTitle="HOME">
-        <Dashboard />
-    </ScreenWrapper>
+    <screen-wrapper page-title="HOME">
+        <dashboard />
+    </screen-wrapper>
 </template>
 
 <script>

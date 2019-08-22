@@ -1,7 +1,7 @@
 <template>
-    <ScreenWrapper pageTitle="宛先登録">
-        <DestinationEditContainer />
-    </ScreenWrapper>
+    <screen-wrapper page-title="宛先登録">
+        <destination-edit-container />
+    </screen-wrapper>
 </template>
 
 <script>
