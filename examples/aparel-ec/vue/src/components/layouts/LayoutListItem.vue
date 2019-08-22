@@ -18,6 +18,8 @@ const StyledListItem = styled('li', StyledProps)`
   text-align: center;
   border-bottom: 1px dashed rgba(0, 0, 0, 0.5);
   padding-top: 16px;
+  flex: 170px;
+  max-width: 50%;
 
   ${(props) => {
     if (!props.column) return;

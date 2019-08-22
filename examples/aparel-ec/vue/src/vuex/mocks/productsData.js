@@ -5,8 +5,8 @@ export const PRODUCTS_DATA = [
   {
     id: 1,
     name: "AのTシャツ",
-    image: "/assets/dummy-t-shirts.png",
-    thumbnailImage: "/assets/dummy-t-shirts.png",
+    image: "/dummy-t-shirts.png",
+    thumbnailImage: "/dummy-t-shirts.png",
     category: [CATEGORIES_DATA[0]],
     brand: BRANDS_DATA[0],
     valiation: [
@@ -35,8 +35,8 @@ export const PRODUCTS_DATA = [
   {
     id: 2,
     name: "Bのシャツ",
-    image: "/assets/dummy-shirts.png",
-    thumbnailImage: "/assets/dummy-shirts.png",
+    image: "/dummy-shirts.png",
+    thumbnailImage: "/dummy-shirts.png",
     category: [CATEGORIES_DATA[0]],
     brand: BRANDS_DATA[1],
     valiation: [
@@ -65,8 +65,8 @@ export const PRODUCTS_DATA = [
   {
     id: 3,
     name: "Cの7部丈",
-    image: "/assets/dummy-ankle-length.png",
-    thumbnailImage: "/assets/dummy-ankle-length.png",
+    image: "/dummy-ankle-length.png",
+    thumbnailImage: "/dummy-ankle-length.png",
     category: [CATEGORIES_DATA[0]],
     brand: BRANDS_DATA[2],
     valiation: [

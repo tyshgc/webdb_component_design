@@ -4,6 +4,7 @@
         :has-margin="layoutOption.MARGIN"
         :has-padding="layoutOption.PADDING"
       >
+        <h1 v-if="pageTitle">{{pageTitle}}</h1>
         <slot />
       </layout>
     </styled-main>
@@ -31,6 +32,9 @@ const StyledMain = styled.main`
 
 export default {
   name: "ScreenWrapper",
+  props: {
+    pageTitle: String
+  },
   computed: {
     layoutOption() {
       return LAYOUT_OPTION

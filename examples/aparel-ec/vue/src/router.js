@@ -3,9 +3,12 @@ import Router from "vue-router";
 
 // Screens
 import {
-  DestinationScreen,
-  DestinationRegistrationScreen,
-  HomeScreen 
+  BrandDetailScreen,
+  BrandsScreen,
+  CategoriesScreen,
+  CategoryDetailScreen,
+  HomeScreen,
+  ProductsScreen
 } from "@/components/screens";
 
 Vue.use(Router);
@@ -20,14 +23,31 @@ export default new Router({
       component: HomeScreen
     },
     {
-      path: "/reference",
-      name: "reference",
-      component: DestinationScreen
+      path: "/product",
+      name: "products",
+      component: ProductsScreen
     },
     {
-      path: "/registration",
-      name: "registration",
-      component: DestinationRegistrationScreen
+      path: "/category",
+      name: "category",
+      component: CategoriesScreen
     },
+    {
+      path: "/category/:label",
+      name: "categoryDetail",
+      component: CategoryDetailScreen,
+      props: route => ({ label: route.params.label })
+    },
+    {
+      path: "/brand",
+      name: "brand",
+      component: BrandsScreen
+    },
+    {
+      path: "/brand/:label",
+      name: "brandDetail",
+      component: BrandDetailScreen,
+      props: route => ({ label: route.params.label })
+    }
   ]
 });

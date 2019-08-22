@@ -1,3 +1,3 @@
-import { ListItemGroup } from "./ListItemGroup.vue";
+import ListItemGroup from "./ListItemGroup.vue";
 
 export { ListItemGroup };

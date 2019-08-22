@@ -1,5 +1,5 @@
 <template>
-  <div @click="onClicked">
+  <div @click="onTransition">
     <layout :has-margin="hasBottomMargin">
       <list-thumbnail-image :image="image" />
     </layout>
@@ -17,6 +17,7 @@
  * ListItemGroup GUI Group Component
  * @title リストのタイトル
  * @image 画像のURL
+ * @onClicked リストをクリックした際のイベント
  */
 
 // Components
@@ -34,6 +35,12 @@ export default {
   computed: {
     hasBottomMargin() {
       return { bottom: true };
+    }
+  },
+  methods: {
+    onTransition() {
+      if(!this.onClicked) return;
+      this.onClicked();
     }
   },
   components: {

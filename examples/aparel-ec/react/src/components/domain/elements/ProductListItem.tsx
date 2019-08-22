@@ -33,10 +33,11 @@ interface Props {
 export const ProductListItem = (props: Props) => {
   const { title, thumbnail, priceLabel, brandName } = props;
   const hasMarginBottom = { bottom: true };
+  const noneMarginBottom = { bottom: true };
 
   return (
     <ListItemGroup title={title} image={thumbnail}>
-      <Layout hasMargin={{ bottom: false }}>
+      <Layout hasMargin={noneMarginBottom}>
         <Price value={priceLabel} />
       </Layout>
       <Layout hasMargin={hasMarginBottom}>

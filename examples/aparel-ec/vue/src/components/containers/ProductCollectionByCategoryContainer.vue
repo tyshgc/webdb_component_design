@@ -11,9 +11,7 @@ import { Products } from "@/components/domain/objects/";
 
 export default connect({
     stateToProps:  {
-        //name: () => store.getters.fullName,
-        //postalCode: () => store.getters.postalCodeAll,
-        address: ()=> store.getters.address
+        products: ()=> store.getters.productListByCategory
     }
 })("ProductCollectionByCategoryContainer", Products)
 </script>

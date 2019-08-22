@@ -1,9 +1,9 @@
-import { ListThumbnailImage } from "./ListThumbnailImage.vue";
-import { ListTitle } from "./ListTitle.vue";
-import { NotFoundMessage } from "./NotFoundMessage.vue";
-import { Price } from "./Price.vue";
-import { ScreenTransition } from "./ScreenTransition.vue";
-import { ScreenWrapper } from "./ScreenWrapper.vues";
+import ListThumbnailImage from "./ListThumbnailImage.vue";
+import ListTitle from "./ListTitle.vue";
+import NotFoundMessage from "./NotFoundMessage.vue";
+import Price from "./Price.vue";
+import ScreenTransition from "./ScreenTransition.vue";
+import ScreenWrapper from "./ScreenWrapper.vue";
 
 export {
   ListThumbnailImage,
