@@ -42,9 +42,9 @@ export const Products = (props: Props) => {
   };
 
   return (
-    <LayoutList>
+    <div>
       <>{ProductList()}</>
       <>{ProductNone()}</>
-    </LayoutList>
+    </div>
   );
 };

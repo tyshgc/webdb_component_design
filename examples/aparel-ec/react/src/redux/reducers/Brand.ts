@@ -25,15 +25,5 @@ export const selectBrandAction = (
     }
   });
 
-  console.log(`newState`, newState);
-
   return newState;
-};
-
-// 選択している任意ブランドをリセットする
-export const resetSelectBrandAction = (state: typeState) => {
-  const selectProductsByBrand = undefined;
-  const resetState = Object.assign({}, state, { selectProductsByBrand });
-
-  return resetState;
 };

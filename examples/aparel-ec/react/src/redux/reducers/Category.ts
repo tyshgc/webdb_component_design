@@ -31,12 +31,3 @@ export const selectCategoryAction = (
 
   return newState;
 };
-
-// 選択している任意カテゴリをリセットする
-export const resetSelectCategoryAction = (state: typeState) => {
-  if (!state.products) return Object.assign({}, state);
-  const selectProductsByCategory = undefined;
-  const resetState = Object.assign({}, state, { selectProductsByCategory });
-
-  return resetState;
-};
